@@ -1,6 +1,6 @@
 package com.rezende.erdeliver.entities;
 
-public enum OderStatus {
+public enum OrderStatus {
 	
 	PENDING, DELIVERED;
 }

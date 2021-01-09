@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.rezende.erdeliver.entities.OderStatus;
+import com.rezende.erdeliver.entities.OrderStatus;
 import com.rezende.erdeliver.entities.Order;
 
 public class OrderDTO implements Serializable{
@@ -17,14 +17,14 @@ public class OrderDTO implements Serializable{
 	private Double latitude;
 	private Double longitude;
 	private Instant moment;
-	private OderStatus status;
+	private OrderStatus status;
 	
 	private List<ProductDTO> products = new ArrayList<>();
 	
 	public OrderDTO() {
 	}
 
-	public OrderDTO(Long id, String address, Double latitude, Double longitude, Instant moment, OderStatus status) {
+	public OrderDTO(Long id, String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
 		this.id = id;
 		this.address = address;
 		this.latitude = latitude;
@@ -83,11 +83,11 @@ public class OrderDTO implements Serializable{
 		this.moment = moment;
 	}
 
-	public OderStatus getStatus() {
+	public OrderStatus getStatus() {
 		return status;
 	}
 
-	public void setStatus(OderStatus status) {
+	public void setStatus(OrderStatus status) {
 		this.status = status;
 	}
 

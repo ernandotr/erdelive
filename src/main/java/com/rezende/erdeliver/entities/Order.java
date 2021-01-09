@@ -27,7 +27,7 @@ public class Order implements Serializable{
 	private Double latitude;
 	private Double longitude;
 	private Instant moment;
-	private OderStatus status;
+	private OrderStatus status;
 	
 	@ManyToMany
 	@JoinTable(name = "tb_order_product", 
@@ -37,7 +37,7 @@ public class Order implements Serializable{
 	
 	public Order() {}
 
-	public Order(Long id, String address, Double latitude, Double longitude, Instant moment, OderStatus status) {
+	public Order(Long id, String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
 		this.id = id;
 		this.address = address;
 		this.latitude = latitude;
@@ -86,11 +86,11 @@ public class Order implements Serializable{
 		this.moment = moment;
 	}
 
-	public OderStatus getStatus() {
+	public OrderStatus getStatus() {
 		return status;
 	}
 
-	public void setStatus(OderStatus status) {
+	public void setStatus(OrderStatus status) {
 		this.status = status;
 	}
 
